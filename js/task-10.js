@@ -1,4 +1,4 @@
-"use strict";
+
 document.body.style.backgroundColor = '#abbbc4';
 
 function getRandomHexColor() {
