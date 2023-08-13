@@ -1,4 +1,4 @@
-
+"use strict";
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -7,16 +7,13 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-
 const ingredientsList = document.querySelector('#ingredients');
 
-const newIngredients = ["Potatoes","Mushrooms","Garlic","Tomatos","Herbs","Condiments"];
+const items = ingredients.map((ingredient) => {
+  const item = document.createElement('li');
+  item.textContent = ingredient;
+  item.classList.add('item');
+  return item;
+});
 
-const markup = newIngredients
-  .map((ingredient) => `<li class="item">${ingredient}</li>`)
-  .join("");
-  
-  ingredientsList.appendChild(markup);
-
-  console.log(markup);
-
+ingredientsList.append(...items);

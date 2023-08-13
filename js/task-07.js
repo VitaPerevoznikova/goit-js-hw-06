@@ -1,4 +1,4 @@
-
+"use strict";
 const inputRange = document.querySelector("#font-size-control");
 const inputText = document.querySelector("#text");
 
